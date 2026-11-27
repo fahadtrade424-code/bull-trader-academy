@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sir Hamza Bull Trader Academy — Institutional Market Education</title>
+    <meta
+      name="description"
+      content="Master disciplined price action, liquidity structure, and risk management at Sir Hamza Bull Trader Academy. Apply online, verify Student IDs, and access your student portal."
+    />
+    <meta property="og:title" content="Sir Hamza Bull Trader Academy" />
+    <meta
+      property="og:description"
+      content="Master disciplined price action, liquidity structure, and risk management at Sir Hamza Bull Trader Academy."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <canvas id="candlestick-bg" aria-hidden="true"></canvas>
+
+    <div class="site-shell">
+      <header class="top-bar" id="site-header">
+        <div class="container top-bar-inner">
+          <a href="#home" class="brand-wordmark" data-route="home">
+            Sir Hamza Bull Trader Academy
+          </a>
+
+          <nav class="primary-nav" aria-label="Primary Navigation">
+            <a href="#home" class="nav-link" data-route="home">Home</a>
+            <a href="#admission" class="nav-link" data-route="admission">Courses</a>
+            <a href="#verify" class="nav-link" data-route="verify">Verify ID</a>
+            <a href="#portal" class="nav-link" data-route="portal">Student Portal</a>
+            <a href="#admin" class="nav-link" data-route="admin">Admin Panel</a>
+          </nav>
+
+          <div class="top-bar-actions">
+            <a href="#admission" class="btn btn-gold btn-sm nav-cta" data-route="admission">
+              Apply Now
+            </a>
+            <button
+              type="button"
+              id="mobile-menu-toggle"
+              class="mobile-menu-btn"
+              aria-label="Open navigation menu"
+              aria-expanded="false"
+              aria-controls="mobile-drawer"
+            >
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div id="mobile-drawer" class="mobile-drawer" hidden>
+          <nav class="mobile-nav-list" aria-label="Mobile Navigation">
+            <a href="#home" class="mobile-nav-link" data-route="home">Home</a>
+            <a href="#admission" class="mobile-nav-link" data-route="admission">Courses</a>
+            <a href="#admission" class="mobile-nav-link" data-route="admission">Student Admission</a>
+            <a href="#portal" class="mobile-nav-link" data-route="portal">Student Portal</a>
+            <a href="#verify" class="mobile-nav-link" data-route="verify">Verify Student ID</a>
+            <a href="#admin" class="mobile-nav-link" data-route="admin">Admin Panel</a>
+          </nav>
+        </div>
+      </header>
+
+      <main id="app-root" class="main-content" tabindex="-1"></main>
+
+      <footer class="site-footer" id="site-footer">
+        <div class="container footer-grid">
+          <div class="footer-brand-col">
+            <div class="footer-wordmark">Sir Hamza Bull Trader Academy</div>
+            <p class="footer-copy">
+              Structured market education built on price action, liquidity mechanics, and strict capital preservation.
+            </p>
+            <p class="footer-storage-note">
+              Static browser edition: Student applications, portal records, and verification data are stored locally in your browser via LocalStorage.
+            </p>
+          </div>
+
+          <div class="footer-links-col">
+            <div class="footer-heading">Navigation</div>
+            <ul class="footer-link-list">
+              <li><a href="#home" data-route="home">Academy Overview</a></li>
+              <li><a href="#admission" data-route="admission">4-Step Admission</a></li>
+              <li><a href="#portal" data-route="portal">Student Portal</a></li>
+              <li><a href="#verify" data-route="verify">Student ID Verification</a></li>
+              <li><a href="#admin" data-route="admin">Admin Console</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact-col">
+            <div class="footer-heading">Direct Contact</div>
+            <ul class="footer-contact-list" id="footer-contact-list">
+              <li>
+                <span class="contact-label">WhatsApp &amp; Phone</span>
+                <a href="https://wa.me/923256000474" target="_blank" rel="noopener noreferrer" class="mono-link" id="footer-phone-link">
+                  0325 6000474
+                </a>
+              </li>
+              <li>
+                <span class="contact-label">Official Email</span>
+                <a href="mailto:sirhamzawebsite@gmail.com" class="mono-link" id="footer-email-link">
+                  sirhamzawebsite@gmail.com
+                </a>
+              </li>
+              <li>
+                <span class="contact-label">Admissions Desk</span>
+                <span class="contact-value">Monday – Saturday, 10:00 AM – 8:00 PM PKT</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="container footer-bottom">
+          <span>&copy; <span id="footer-year">2026</span> Sir Hamza Bull Trader Academy. All rights reserved.</span>
+          <span class="footer-risk">Trading involves market risk. Education is for analytical skill development only.</span>
+        </div>
+      </footer>
+    </div>
+
+    <div id="modal-root" class="modal-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title"></div>
+    <div id="toast-root" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
